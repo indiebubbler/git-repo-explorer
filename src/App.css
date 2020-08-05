@@ -1,0 +1,72 @@
+:root {
+	--lightgrey: #f2f2f2;
+	--midgrey: #e5e5e5;
+	--darkgrey: #e0e0e0;
+	--darkergrey: #333;
+	--blue: #2c9cdb;
+	--textcolor: #1e1e1e;
+}
+
+.btn-primary {
+	background-color: var(--blue);
+	border-color: var(--blue);
+}
+
+.btn-secondary {
+	background-color: var(--midgrey);
+	color: var(--textcolor);
+	border: 0px;
+	margin: 0.5rem 0;
+	padding: 0 2rem 0 1rem;
+	text-align: left;
+	background-image: url("images/arrow_down.png");
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: 2rem;
+}
+
+.card,
+.btn,
+.form-control {
+	border-radius: 2px;
+}
+
+
+body {
+	background-color: var(--lightgrey);
+	color: var(--textcolor);
+}
+
+.infoText {
+	margin: 1rem 0;
+	color: var(--darkergrey)
+}
+.GitExplorer {
+	width: 50%;
+	margin: 1rem auto;
+	background-color: white;
+	padding: 1rem;
+	/* width: 200px */
+}
+
+.RepoCart {
+	background-color: var(--darkgrey);
+	margin: 1rem 0 0 1rem;
+	/* padding: 0 -1rem 0 0; */
+}
+
+.RepoCart .header {
+	font-weight: bold;
+}
+
+.RepoCart .title {
+	text-align: left;
+}
+
+.RepoCart .stars {
+	text-align: right;
+}
+
+.RepoCart .description {
+	text-align: justify;
+}
