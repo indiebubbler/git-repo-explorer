@@ -1,7 +1,7 @@
 import React from 'react';
 import GitExplorer from './components/GitExplorer'
 import { Provider } from 'react-redux';
-import store from './components/store';
+import store from './actions/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // it's important to import our custom css after bootstrap as we're overriding stuff in there
 import './App.css';

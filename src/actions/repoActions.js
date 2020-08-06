@@ -1,9 +1,7 @@
 import * as actions from './actionTypes'
 import axios from 'axios'
 
-const initialState = {
-    repos: {}
-}
+const initialState = {}
 
 const fetchReposRequest = loginId => {
     return {
@@ -17,6 +15,7 @@ const clearReposRequest = () => {
         type: actions.CLEAR_REPOS
     }
 }
+
 const fetchReposSuccess = repos => {
     return {
         type: actions.FETCH_REPOS_SUCCESS,
@@ -35,16 +34,16 @@ const repoReducer = (state = initialState, action) => {
     let newState;
     switch (action.type) {
         case actions.FETCH_REPOS_REQUEST:
-            newState = {...state}
-            newState.repos[action.payload] = {
+            newState = { ...state }
+            newState[action.payload] = {
                 isLoading: true,
                 fetched: false,
                 items: []
             }
             return newState;
         case actions.FETCH_REPOS_SUCCESS:
-            newState = {...state}
-            newState.repos[action.payload.loginId] = {
+            newState = { ...state }
+            newState[action.payload.loginId] = {
                 isLoading: false,
                 fetched: true,
                 items: action.payload.repos
@@ -53,7 +52,7 @@ const repoReducer = (state = initialState, action) => {
         case actions.FETCH_REPOS_FAILURE:
             return { ...state }
         case actions.CLEAR_REPOS:
-            return { ...state, repos: {}}
+            return { }
         default:
             return state;
     }
@@ -62,7 +61,7 @@ const repoReducer = (state = initialState, action) => {
 export default repoReducer;
 
 export const clearRepos = () => {
-    return function(dispatch) {
+    return function (dispatch) {
         dispatch(clearReposRequest())
     }
 }
@@ -70,7 +69,7 @@ export const fetchRepos = (loginReposTuple) => {
     return function (dispatch) {
         const loginId = loginReposTuple.loginId;
         const reposUrl = loginReposTuple.reposUrl;
-        
+
         dispatch(fetchReposRequest(loginId))
 
         axios.get(reposUrl).then(response => {

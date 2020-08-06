@@ -12,7 +12,7 @@
 	border-color: var(--blue);
 }
 
-.btn-secondary {
+.btn-expandable {
 	background-color: var(--midgrey);
 	color: var(--textcolor);
 	border: 0px;
@@ -25,34 +25,36 @@
 	background-size: 2rem;
 }
 
+.btn-expandable.expanded {
+	background-image: url("images/arrow_up.png");
+}
+
 .card,
 .btn,
 .form-control {
 	border-radius: 2px;
 }
 
-
 body {
 	background-color: var(--lightgrey);
 	color: var(--textcolor);
 }
 
-.infoText {
+.label {
 	margin: 1rem 0;
 	color: var(--darkergrey)
 }
+
 .GitExplorer {
 	width: 50%;
 	margin: 1rem auto;
 	background-color: white;
 	padding: 1rem;
-	/* width: 200px */
 }
 
 .RepoCart {
 	background-color: var(--darkgrey);
 	margin: 1rem 0 0 1rem;
-	/* padding: 0 -1rem 0 0; */
 }
 
 .RepoCart .header {
