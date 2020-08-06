@@ -30,7 +30,7 @@ export const GitExplorer = props => {
 
     return (
         <Container className='GitExplorer'>
-            Github Repositories Explorer
+            <h2 style={{paddingBottom: '1rem'}}>Github Repositories Explorer</h2>
             <InputGroup size="sm" className="mb-3">
                 <FormControl ref={searchInputField} onKeyPress={onKeyUp} placeholder="Enter username" />
             </InputGroup>

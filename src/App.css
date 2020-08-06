@@ -4,7 +4,7 @@
 	--darkgrey: #e0e0e0;
 	--darkergrey: #333;
 	--blue: #2c9cdb;
-	--textcolor: #1e1e1e;
+	--textcolor: #222;
 }
 
 .btn-primary {
@@ -14,7 +14,7 @@
 
 .btn-expandable {
 	background-color: var(--midgrey);
-	color: var(--textcolor);
+	color: var(--darkergrey);
 	border: 0px;
 	margin: 0.5rem 0;
 	padding: 0 2rem 0 1rem;
@@ -37,7 +37,7 @@
 
 body {
 	background-color: var(--lightgrey);
-	color: var(--textcolor);
+	color: var(--darkergrey);
 }
 
 .label {
