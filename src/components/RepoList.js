@@ -28,12 +28,11 @@ export const RepoList = props => {
             <Label show={isLoading}>Loading...</Label>
             
             <Collapse in={open}>
-                
                 {/* Bootstrap doesn't want to collapse when no child so wrap it into container to avoid error when user has no repositories */}
                 <Container>
                     <Label show={fetched && userRepos.length === 0}>This user has not created any repository yet.</Label>
                     {
-                        userRepos.map(repo => { return (<RepoCart repo={repo} />) })
+                        userRepos.map((repo,idx) => { return (<RepoCart key={'repo_'+idx} repo={repo} />) })
                     }
                 </Container>
             </Collapse>

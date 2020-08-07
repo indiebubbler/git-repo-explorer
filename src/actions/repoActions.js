@@ -73,7 +73,6 @@ export const fetchRepos = (loginReposTuple) => {
         dispatch(fetchReposRequest(loginId))
 
         axios.get(reposUrl).then(response => {
-
             const repos = response.data.map(repo => { return { name: repo.name, stargazersCount: repo.stargazers_count, description: repo.description } })
             const o = {
                 loginId: loginId,
