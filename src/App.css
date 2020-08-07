@@ -46,8 +46,8 @@ body {
 }
 
 .GitExplorer {
-	width: 50%;
-	margin: 1rem auto;
+	width:  400px;
+	margin: 5rem auto;
 	background-color: white;
 	padding: 1rem;
 }
